@@ -1,0 +1,23 @@
+version: "1"
+services:
+  web:
+    image: hovig/cloud-ready-ml
+    command: python app.py
+    depends_on:
+      - es
+    ports:
+      - 5000:5000
+    volumes:
+      - ./ml-data-pipeline:/opt/ml-data-pipeline
+  es:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
+    container_name: es
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data
+volumes:
+    esdata1:
+      driver: local
