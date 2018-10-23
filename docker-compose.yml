@@ -1,8 +1,8 @@
-version: "1"
+version: "3.3"
 services:
   web:
-    image: hovig/cloud-ready-ml
-    command: python app.py
+    image: hovig/python-ml-pipeline
+    command: python data_pull.py
     depends_on:
       - es
     ports:
