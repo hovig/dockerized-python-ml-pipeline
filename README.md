@@ -1,3 +1,11 @@
+![](img/import_page.png)
+
+<hr>
+
+![](img/scores.png)
+
+<hr>
+
 > _Docker Hub_:
 
 1) docker pull hovig/python-ml-pipeline
