@@ -1,0 +1,9 @@
+applications:
+- name: titanic-ml
+  buildpack: "https://github.com/cloudfoundry/python-buildpack#v1.5.15"
+  instances: 1
+  memory: 512M
+  disk_quota: 256M
+  path: .
+  no-route: true
+  health-check-type: none
