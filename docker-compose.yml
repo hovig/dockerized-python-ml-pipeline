@@ -1,14 +1,15 @@
 version: "3.3"
 services:
   web:
+    build: .
     image: hovig/python-ml-pipeline
-    command: python data_pull.py
+    command: python pull_data.py
     depends_on:
       - es
     ports:
       - 5000:5000
     volumes:
-      - ./ml-data-pipeline:/opt/ml-data-pipeline
+      - .:/ml
   es:
     image: docker.elastic.co/elasticsearch/elasticsearch:6.3.2
     container_name: es
