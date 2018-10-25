@@ -24,6 +24,8 @@
 2) cf login -u <ibmcloud_username> -p <password>
 3) cf push <app_name>
 
+<b>Try it here:</b>[ml-pipeline.mybluemix.net](http://ml-pipeline.mybluemix.net/)
+
 <hr>
 
 ![](img/login_bx.png)
